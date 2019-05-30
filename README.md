@@ -35,10 +35,10 @@ The `xquick` package is used to create notes (in the form **I** like) in the `el
 
 ## Other Packages Included
 
- - {hyperref}
- - {enumitem}
- - [titles]{tocloft}
- - {fancyhdr}
- - {titling}
- - {CJK}
- - {CJKnumb}
+ - `{hyperref}`
+ - `{enumitem}`
+ - `[titles]{tocloft}`
+ - `{fancyhdr}`
+ - `{titling}`
+ - `{CJK}`
+ - `{CJKnumb}`

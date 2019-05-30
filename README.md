@@ -5,19 +5,19 @@ The `xquick` package is used to create notes (in the form **I** like) in the `el
 
 ## Commands
 
- - *maketitle*: A redefined *maketitle
+ - *maketitle*: A redefined *maketitle*
  - *xtitle*: An unnumbered title (will not be included in the table of contents)
- - *resetcount*: Reset counter for *section (i.e. \setcounter{section}{0})
+ - *resetcount*: Reset counter for *section* (i.e. \setcounter{section}{0})
  - *xcopyright*: Set the copyright part (left footer). (Original: Copyright \the\year \theauthor)
  - *zhdoc*: Turns document into Chinese document
  - *setversion*: Sets version
- - *rmtwocolumn*: Remove *twocolumn
+ - *rmtwocolumn*: Remove *twocolumn*
 
 
 ## Elements
 
  - *thetitle, thedate, theauthor*: Shows the title, the date and the author respectively
- - *xdate*: Shows today's date in form *yyyymmdd
+ - *xdate*: Shows today's date in form *yyyymmdd*
  - *versionx*: Shows version
 
 

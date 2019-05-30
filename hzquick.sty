@@ -1,0 +1,114 @@
+\def\fileversion{1.0}
+\def\filedate{2019/05/30}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hzquick}[\filedate\space Version \fileversion\space by Vee Hua Zhi]
+
+\def\xdate{\leavevmode\hbox{\the\year\twodigits\month\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+%============================
+
+\providecommand\versionx{1.0}
+\def\setversion#1{
+\renewcommand\versionx{#1}
+}
+\def\version{
+v.\versionx.\xdate
+}
+
+\RequirePackage[margin=1in]{geometry}
+\setlength\paperheight {297mm}
+\setlength\paperwidth  {210mm}
+
+\@twocolumntrue
+\RequirePackage{hyperref}
+\RequirePackage{enumitem} 
+\setlist{nosep}
+\RequirePackage[titles]{tocloft}
+\renewcommand{\cftdot}{}
+\RequirePackage{fancyhdr}
+\RequirePackage{titling}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{\thetitle} }
+\rhead{ \fancyplain{}{\version} }
+\rfoot{ \fancyplain{}{\thepage} }
+\lfoot{ \fancyplain{}{\cpr} }
+\RequirePackage{CJK}
+\RequirePackage{CJKnumb}
+%=========================
+
+\def\@seccntDot{}
+\def\@seccntformat#1{\csname the#1\endcsname\@seccntDot\hskip 0.5em}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+           {18\p@ \@plus 6\p@ \@minus 3\p@}%
+           {9\p@ \@plus 6\p@ \@minus 3\p@}%
+           {\normalsize\bfseries\boldmath}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+           {12\p@ \@plus 6\p@ \@minus 3\p@}%
+           {3\p@ \@plus 6\p@ \@minus 3\p@}%
+           {\normalsize\bfseries\itshape}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+           {12\p@ \@plus 6\p@ \@minus 3\p@}%
+           {\p@}%
+           {\normalsize\bfseries\itshape}}
+
+\def\paragraph{\secdef{\els@aparagraph}{\els@bparagraph}}
+\def\els@aparagraph[#1]#2{\elsparagraph[#1]{#2.}}
+\def\els@bparagraph#1{\elsparagraph*{#1.}}
+
+\renewcommand\elsparagraph{\@startsection{paragraph}{4}{0\z@}%
+           {10\p@ \@plus 6\p@ \@minus 3\p@}%
+           {-6\p@}%
+           {\normalfont\itshape}}
+%=====================
+
+\newcommand\zhdoc{
+\renewcommand\contentsname{目录}
+\renewcommand\listfigurename{图目录}
+\renewcommand\listtablename{表目录}
+\renewcommand\refname{参考}
+\renewcommand\indexname{索引}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\renewcommand\partname{部分}
+\renewcommand\appendixname{附录}
+\renewcommand\abstractname{摘要}
+%\titleformat{\chapter}[block]{\centering\huge\bfseries}{单元\CJKnumber{\thechapter}}{1em}{}
+\renewcommand\today{
+\number\year年\number\month月\number\day日
+}
+}
+
+\providecommand\cpr{Copyright \the\year \space \theauthor}
+\def\xcopyright#1{
+\renewcommand\cpr{#1}
+}
+
+\newcommand\xtitle[1]{
+    \begin{center}
+        \large\textbf{#1}
+    \end{center}}
+
+\renewcommand\maketitle{
+\begin{center}
+    {\Large \thetitle \par}
+    \vskip 1em
+    {\large
+     \lineskip .25em
+      \begin{tabular}[t]{c}
+        \theauthor
+      \end{tabular}\par}
+      \vskip 0.5em
+    {\large \thedate \par}
+  \end{center}\par
+}
+
+\def\resetcount{
+    \setcounter{section}{0}
+}
+
+\def\rmtwocolumn{
+    \@twocolumnfalse
+}

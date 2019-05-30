@@ -1,0 +1,58 @@
+\documentclass{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{hzquick}
+
+\title{Package: \texttt{elsquick}}
+\author{Vee Hua Zhi}
+\date{May 2019}
+
+\rmtwocolumn
+\def\xdate{20190530}
+
+\begin{document}
+\maketitle
+\xtitle{Abstract}
+\texttt{elsquick} is a package for quick notes, used with the class \texttt{elsarticle}. 
+
+
+\xtitle{Commands}
+\begin{description}
+    \item [maketitle] A redefined \texttt{maketitle}
+    \item [xtitle] An unnumbered title (will not be included in the table of contents)
+    \item [resetcount] Reset counter for \texttt{section} \\(i.e. \verb!\setcounter{section}{0}!)
+    \item [xcopyright] Set the copyright part (left footer). (Original: \verb!Copyright \!)
+    \item [zhdoc] Turns document into Chinese document
+    \item [setversion] Sets version
+    \item [rmtwocolumn] Remove \texttt{twocolumn}
+\end{description}
+
+\xtitle{Elements}
+\begin{description}
+    \item [thetitle, thedate, theauthor] Shows the title, the date and the author respectively
+    \item [xdate] Shows today's date in form \texttt{yyyymmdd}
+    \item [versionx] Shows version
+\end{description}
+
+\xtitle{Functions}
+\begin{enumerate}
+    \item \texttt{twocolumn} automatically activated
+    \item Redefined \texttt{maketitle}
+    \item Table of contents is hyperlinked
+    \item Removed vertical spacing in lists
+    \item Removed dots in table of contents
+    \item Set margin to 1 inch
+    \item Set paper to A4 Paper
+    \item Header/footer is set using the package \texttt{fancyhdr}
+\end{enumerate}
+
+\xtitle{Other Packages Included}
+\begin{itemize}
+    \item \texttt{\{hyperref\}}
+    \item \texttt{\{enumitem\}}
+    \item \texttt{{[titles]}\{tocloft\}}
+    \item \texttt{\{fancyhdr\}}
+    \item \texttt{\{titling\}}
+    \item \texttt{\{CJK\}}
+    \item \texttt{\{CJKnumb\}}
+\end{itemize}
+\end{document}

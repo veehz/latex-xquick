@@ -2,6 +2,8 @@
 
 The `xquick` package is used to create notes (in the form **I** like) in the `elsarticle` class.
 
+This material is subject to the GNU General Public License v3.0.
+
 
 ## Commands
 
